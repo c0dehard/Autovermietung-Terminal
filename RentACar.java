@@ -5,8 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import static java.lang.Compiler.command;
 import java.util.Scanner;
+import static java.lang.System.out;
 
-public class OOP_Arrays {
+public class RentACar {
 
     public static void main(String[] args) throws IOException {
 
@@ -29,7 +30,7 @@ public class OOP_Arrays {
         while (true) {
                     try{
                         
-        String  command = "clear"; //für macOS Terminal.  unter windows cls
+        String  command = "clear"; //macOS Terminal command in windows: " cls "
          
         Process process  = Runtime.getRuntime().exec(command);  
         BufferedReader read= new BufferedReader (new InputStreamReader(process.getInputStream()));
@@ -41,10 +42,10 @@ public class OOP_Arrays {
         catch (IOException e1){
             System.out.println(e1);
         }
-            System.out.println("Hersteller" + "\t\t\t" + "Modell" + "\tVerfügbar");
-            System.out.println("=================================================");
+            out.println("Hersteller" + "\t\t\t" + "Modell" + "\tVerfügbar");
+            out.println("=================================================");
             for (int i = 1; i < 11; i++) {
-                System.out.print(auto[i].getHersteller() + "     \t\t\t" + auto[i].getModell() + "\t");
+                out.print(auto[i].getHersteller() + "     \t\t\t" + auto[i].getModell() + "\t");
                 if (auto[i].isVermietet() == false) {
                     System.out.println("   ✔");
                 } else {
@@ -57,7 +58,7 @@ public class OOP_Arrays {
             }
             System.out.println("\nWelches auto soll Vermietet werden?\nSchreibe ");
             int z = sc.nextInt();
-            auto[z].setVermietet(!auto[z].isVermietet()); //wenn nicht vermietet
+            auto[z].setVermietet(!auto[z].isVermietet()); //if not available
         }
 
     }
