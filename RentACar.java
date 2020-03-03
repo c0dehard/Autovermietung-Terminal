@@ -13,7 +13,7 @@ public class RentACar {
 
         Auto[] auto = new Auto[11];
         
-        auto[0] = new Auto();//muggel fangen nicht bei 0 an
+        auto[0] = new Auto(); //MissingNo
         auto[1] = new Auto("Volkswagen", "Golf 1", false);
         auto[2] = new Auto("Mercedes", "AMG", false);
         auto[3] = new Auto("Fiat", "Punto", false);
@@ -30,10 +30,10 @@ public class RentACar {
         while (true) {
                     try{
                         
-        String  command = "clear"; //macOS Terminal command in windows: " cls "
+        String command = "clear"; //macOS Terminal command in windows: " cls "
          
         Process process  = Runtime.getRuntime().exec(command);  
-        BufferedReader read= new BufferedReader (new InputStreamReader(process.getInputStream()));
+        BufferedReader read = new BufferedReader (new InputStreamReader(process.getInputStream()));
         String s;
         
         while (( s=read.readLine())!=null)
@@ -52,7 +52,7 @@ public class RentACar {
                     System.out.println("   ✖");
                 }
             }
-            //abtrennung und frage
+            /////
             for (int i = 0; i < 49; i++) {
                 System.out.print("-");
             }
