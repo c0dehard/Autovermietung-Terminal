@@ -1,52 +1,42 @@
-
 package oop_arrays;
 
-/**
- *
- * @author c0dehard
- */
 public class Auto {
 
-    //Attribute
-    private String hersteller;
-    private String modell;
-    private boolean vermietet;
+    private String _hersteller, _modell;
+    private boolean _vermietet;
 
-    //Konstruktor
     public Auto(String hersteller, String modell, boolean vermietet) {
-        this.hersteller = hersteller;
-        this.modell = modell;
-        this.vermietet = vermietet;
+        _hersteller = hersteller;
+        _modell = modell;
+        _vermietet = vermietet;
     }
     
-        public Auto() {
-       //fix für auto nr 0
+    public Auto() {
+        
     }
     
-
-    //Methoden
     public String getHersteller() {
-        return hersteller;
+        return _hersteller;
     }
 
     public void setHersteller(String hersteller) {
-        this.hersteller = hersteller;
+        _hersteller = hersteller;
     }
 
     public String getModell() {
-        return modell;
+        return _modell;
     }
 
     public void setModell(String modell) {
-        this.modell = modell;
+        _modell = modell;
     }
 
     public boolean isVermietet() {
-        return vermietet;
+        return _vermietet;
     }
 
     public void setVermietet(boolean vermietet) {
-        this.vermietet = vermietet;
+        _vermietet = vermietet;
     }
 
 }
